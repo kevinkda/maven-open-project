@@ -6,7 +6,7 @@
     <artifactId>java-utils-kevinkda</artifactId>
     <version>0.0.1.RELEASE</version>
 
-    <name>java-utils</name>
+    <name>java-utils-kevinkda</name>
     <description>Demo project for Spring Boot</description>
     <url>https://github.com/kevinkda/maven-open-project</url>
 
@@ -23,7 +23,7 @@
         <name>Kevin KDA</name>
     </organization>
 
-    <inceptionYear>2016</inceptionYear>
+    <inceptionYear>2020</inceptionYear>
 
     <licenses>
         <license>
