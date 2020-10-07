@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils</artifactId>
-    <version>0.0.1.RELEASE</version>
+    <version>0.0.1.SNAPSHOT</version>
     <name>java-utils</name>
     <description>Demo project for Spring Boot</description>
 
@@ -14,28 +14,11 @@
         <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
     </properties>
 
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Kevin Tang</name>
-            <email>kevin_kda@yahoo.com.au</email>
-            <organization>Kevin KDA</organization>
-            <organizationUrl>https://github.com/kevin_kda</organizationUrl>
-            <timezone>UTC+08:00</timezone>
-        </developer>
-    </developers>
-
     <scm>
         <connection>scm:git:git@github.com:kevinkda/maven-open-project.git</connection>
         <developerConnection>scm:git:scm:git:git@github.com:kevinkda/maven-open-project.git</developerConnection>
         <url>https://github.com/kevinkda/maven-open-project</url>
-        <tag>java-utils</tag>
+        <tag>y</tag>
     </scm>
 
     <dependencies>
