@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/java-utils/java-utils.iml" filepath="$PROJECT_DIR$/java-utils/java-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-utils-kevinkda/java-utils-kevinkda.iml" filepath="$PROJECT_DIR$/java-utils-kevinkda/java-utils-kevinkda.iml" />
     </modules>
   </component>
 </project>
