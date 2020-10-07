@@ -5,8 +5,10 @@
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils</artifactId>
     <version>0.0.1.RELEASE</version>
+
     <name>java-utils</name>
     <description>Demo project for Spring Boot</description>
+    <url>https://github.com/kevinkda/maven-open-project</url>
 
     <properties>
         <java.version>1.8</java.version>
@@ -15,6 +17,13 @@
         <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
 
     </properties>
+
+    <organization>
+        <url>https://github.com/kevinkda</url>
+        <name>Kevin KDA</name>
+    </organization>
+
+    <inceptionYear>2016</inceptionYear>
 
     <licenses>
         <license>
@@ -28,7 +37,7 @@
             <name>Kevin Tang</name>
             <email>kevin_kda@yahoo.com.au</email>
             <organization>Kevin KDA</organization>
-            <organizationUrl>https://github.com/kevin_kda</organizationUrl>
+            <organizationUrl>https://github.com/kevinkda</organizationUrl>
             <timezone>UTC+08:00</timezone>
         </developer>
     </developers>
