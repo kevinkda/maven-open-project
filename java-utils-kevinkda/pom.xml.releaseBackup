@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils-kevinkda</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1.SNAPSHOT</version>
 
     <name>java-utils-kevinkda</name>
     <description>Demo project for Spring Boot</description>
@@ -45,7 +46,7 @@
         <connection>scm:git:git@github.com:kevinkda/maven-open-project.git</connection>
         <developerConnection>scm:git:scm:git:git@github.com:kevinkda/maven-open-project.git</developerConnection>
         <url>https://github.com/kevinkda/maven-open-project</url>
-        <tag>java-utils-kevinkda-0.0.1.RELEASE</tag>
+        <tag>java-utils</tag>
     </scm>
 
     <issueManagement>
