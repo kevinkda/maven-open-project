@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>java-utils</name>
     <description>Demo project for Spring Boot</description>
@@ -39,7 +39,7 @@
         <connection>scm:git:git@github.com:kevinkda/maven-open-project.git</connection>
         <developerConnection>scm:git:scm:git:git@github.com:kevinkda/maven-open-project.git</developerConnection>
         <url>https://github.com/kevinkda/maven-open-project</url>
-        <tag>java-utils-0.0.1</tag>
+        <tag>java-utils-kevinkda-0.0.1-RELEASE</tag>
     </scm>
 
     <issueManagement>
@@ -60,15 +60,14 @@
         <spring-boot.version>2.3.0.RELEASE</spring-boot.version>
 
 
-        <maven.deploy.plugin.version>3.0.0-M1</maven.deploy.plugin.version>
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
         <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
         <maven.release.plugin.version>3.0.0-M1</maven.release.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <maven.surefire.plugin.version>2.12.4</maven.surefire.plugin.version>
         <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-        <maven.scm.provider.gitexe.version>1.11.2</maven.scm.provider.gitexe.version>
-
-        <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
+        <maven.scm.provider.gitexe.version>1.9.5</maven.scm.provider.gitexe.version>
+        <nexus.staging.maven.plugin.version>1.6.7</nexus.staging.maven.plugin.version>
 
 
         <mybatis-starter.version>2.1.2</mybatis-starter.version>
@@ -119,23 +118,23 @@
             <version>${maven.deploy.plugin.version}</version>
         </dependency>
 
-        <!--        <dependency>-->
-        <!--            <groupId>org.mybatis.spring.boot</groupId>-->
-        <!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
-        <!--            <version>${mybatis-starter.version}</version>-->
-        <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis.spring.boot</groupId>-->
+<!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--            <version>${mybatis-starter.version}</version>-->
+<!--        </dependency>-->
 
-        <!--        <dependency>-->
-        <!--            <groupId>mysql</groupId>-->
-        <!--            <artifactId>mysql-connector-java</artifactId>-->
-        <!--            <scope>runtime</scope>-->
-        <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
 
-        <!--        <dependency>-->
-        <!--            <groupId>com.alibaba</groupId>-->
-        <!--            <artifactId>druid</artifactId>-->
-        <!--            <version>${alibaba.druid.version}</version>-->
-        <!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid</artifactId>-->
+<!--            <version>${alibaba.druid.version}</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>
@@ -265,7 +264,6 @@
             </plugin>
 
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
@@ -308,16 +306,5 @@
             </build>
         </profile>
     </profiles>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
 </project>
