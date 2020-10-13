@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-utils" />
+        <module name="java-utils_old" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="java-utils" target="1.8" />
       <module name="java-utils-kevinkda" target="1.8" />
+      <module name="java-utils_old" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

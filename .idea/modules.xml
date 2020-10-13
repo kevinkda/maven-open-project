@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java-utils/java-utils.iml" filepath="$PROJECT_DIR$/java-utils/java-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../EngineeTest/test/maven-test-01/java-utils/java-utils_old.iml" filepath="$PROJECT_DIR$/../../EngineeTest/test/maven-test-01/java-utils/java-utils_old.iml" />
     </modules>
   </component>
 </project>
