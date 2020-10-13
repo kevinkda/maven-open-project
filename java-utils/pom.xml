@@ -27,6 +27,7 @@
 
     <developers>
         <developer>
+            <id>kevin</id>
             <name>Kevin Tang</name>
             <email>kevin_kda@yahoo.com.au</email>
             <organization>Kevin KDA</organization>
@@ -240,31 +241,31 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-source-plugin</artifactId>-->
-<!--                &lt;!&ndash;                <version>[2.10.4,)</version>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <version>2.1.2</version>&ndash;&gt;-->
-<!--                <version>${maven.source.plugin.version}</version>-->
-<!--                <configuration>-->
-<!--                    <attach>true</attach>-->
-<!--                    &lt;!&ndash;                    <encoding>UTF-8</encoding>&ndash;&gt;-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>attach-javadoc</id>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                    <execution>-->
-<!--                        <id>attach-sources</id>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-source-plugin</artifactId>-->
+            <!--                &lt;!&ndash;                <version>[2.10.4,)</version>&ndash;&gt;-->
+            <!--                &lt;!&ndash;                <version>2.1.2</version>&ndash;&gt;-->
+            <!--                <version>${maven.source.plugin.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <attach>true</attach>-->
+            <!--                    &lt;!&ndash;                    <encoding>UTF-8</encoding>&ndash;&gt;-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>attach-javadoc</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>jar</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>attach-sources</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>jar</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
 
             <!-- Source -->
             <plugin>
@@ -310,24 +311,83 @@
 
 
     <profiles>
+
         <!-- GPG Signature on release -->
+<!--        <profile>-->
+<!--            <id>release-sign-artifacts</id>-->
+<!--            <activation>-->
+<!--                <property>-->
+<!--                    <name>performRelease</name>-->
+<!--                    <value>true</value>-->
+<!--                </property>-->
+<!--            </activation>-->
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                        <version>${maven.gpg.plugin.version}</version>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>sign-artifacts</id>-->
+<!--                                <phase>verify</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>sign</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+
         <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
+            <!-- 这个id就是打包时的 -P 参数 -->
+            <id>release</id>
             <build>
                 <plugins>
+                    <!-- Source插件-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+<!--                        <version>2.2.1</version>-->
+                        <version>${maven.source.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+<!--                        <version>2.9.1</version>-->
+                        <version>${maven.javadoc.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <!-- -Xdoclint:none 是为了避免生成apidoc的时候检查过于严格而报错-->
+<!--                                <configuration>-->
+<!--                                    <additionalparam>-Xdoclint:none</additionalparam>-->
+<!--                                </configuration>-->
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- GPG加密插件 -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+<!--                        <version>1.6</version>-->
                         <version>${maven.gpg.plugin.version}</version>
                         <executions>
                             <execution>
-                                <id>sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
@@ -337,6 +397,18 @@
                     </plugin>
                 </plugins>
             </build>
+
+            <!-- snapshotRepository与repository的id应与setting.xml中添加的server的id一致 -->
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-qinpiyi</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-qinpiyi</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
 
