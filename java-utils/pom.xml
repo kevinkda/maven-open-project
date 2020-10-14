@@ -5,8 +5,8 @@
 
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
-    <!--    <version>0.0.2-RELEASE</version>-->
+    <!--    <version>0.0.2-SNAPSHOT</version>-->
+    <version>0.0.2-RELEASE</version>
 
     <packaging>jar</packaging>
 
@@ -451,6 +451,16 @@
                             <name>implNote</name>
                             <placement>a</placement>
                             <head>Implementation Note:</head>
+                        </tag>
+                        <tag>
+                            <name>interfaces</name>
+                            <placement>a</placement>
+                            <head>Interfaces:</head>
+                        </tag>
+                        <tag>
+                            <name>errorReport</name>
+                            <placement>a</placement>
+                            <head>Error Report:</head>
                         </tag>
                     </tags>
                 </configuration>
