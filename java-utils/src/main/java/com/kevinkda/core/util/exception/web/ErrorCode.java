@@ -11,12 +11,12 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.exception.web
  * @classname ErrorCode
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
-public interface ErrorCode
-        extends ErrorMessages
-{
+public interface ErrorCode extends ErrorMessages {
     /**
      * 返回错误信息的JSON数据
      *
@@ -24,7 +24,9 @@ public interface ErrorCode
      * @author Kevin KDA on 2020/5/16 20:02
      * @description ErrorMessages / toJsonp
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public String toJson();
@@ -37,7 +39,9 @@ public interface ErrorCode
      * @author Kevin KDA on 2020/5/16 20:02
      * @description ErrorMessages / toJsonp
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public String toJsonp(String callback);
@@ -45,11 +49,13 @@ public interface ErrorCode
     /**
      * 获得错误信息
      *
-     * @return java.util.Map<java.lang.String, java.lang.Object> 返回Map形式的错误信息
+     * @return {@code java.util.Map<java.lang.String, java.lang.Object>} 返回Map形式的错误信息
      * @author Kevin KDA on 2020/5/16 20:05
      * @description ErrorMessages / getMsg
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/16 20:05")

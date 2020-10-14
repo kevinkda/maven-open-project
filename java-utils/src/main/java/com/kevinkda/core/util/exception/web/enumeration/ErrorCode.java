@@ -22,6 +22,8 @@ import com.kevinkda.core.util.exception.web.ErrorMessages;
  * <p>A：代表错误级别，1 表示系统级错误，2 表示服务级错误。</p>
  * <p>BB：代表错误项目或者模块号，从 00 开始。</p>
  * <p>CC：具体错误编号，自增，从 00 开始。</p>
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public enum ErrorCode implements ErrorMessages {

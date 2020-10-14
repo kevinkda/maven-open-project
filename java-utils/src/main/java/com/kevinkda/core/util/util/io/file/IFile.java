@@ -15,8 +15,10 @@ package com.kevinkda.core.util.util.io.file;
  * @version 1.0.0
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io.file
- * @classname File<T>
- * @apiNote <p></p>
+ * @classname {@code IFile<T>}
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface IFile<T> extends AutoCloseable {
@@ -28,7 +30,9 @@ public interface IFile<T> extends AutoCloseable {
      * @author Kevin KDA on 2020/5/4 13:16
      * @description IFile / open
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public boolean open(String src);
@@ -41,7 +45,9 @@ public interface IFile<T> extends AutoCloseable {
      * @author Kevin KDA on 2020/5/4 13:18
      * @description IFile / read
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public Object[] read(java.io.File file);
@@ -54,7 +60,9 @@ public interface IFile<T> extends AutoCloseable {
      * @author Kevin KDA on 2020/5/4 13:18
      * @description IFile / write
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public boolean write(T items);
@@ -62,11 +70,12 @@ public interface IFile<T> extends AutoCloseable {
     /**
      * 关闭文件
      *
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:17
      * @description IFile / close
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override

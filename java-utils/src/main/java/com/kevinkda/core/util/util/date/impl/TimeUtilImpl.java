@@ -21,21 +21,29 @@ import org.springframework.stereotype.Service;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.date.impl
  * @classname TimeUtilImpl
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
 public class TimeUtilImpl implements TimeUtil {
     /**
      * 开始时间
+     *
+     * @since 1.0.0
      */
     private long startTime;
     /**
      * 结束时间
+     *
+     * @since 1.0.0
      */
     private long endTime;
     /**
      * 时间间隔
+     *
+     * @since 1.0.0
      */
     private long duration;
 
@@ -43,11 +51,12 @@ public class TimeUtilImpl implements TimeUtil {
     /**
      * 开始计时
      *
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:11
      * @description TimeUtil / startTime
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -63,7 +72,9 @@ public class TimeUtilImpl implements TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:11
      * @description TimeUtil / stopTime
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -82,7 +93,9 @@ public class TimeUtilImpl implements TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:12
      * @description TimeUtil / getDurationByMillisecond
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -98,7 +111,9 @@ public class TimeUtilImpl implements TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:13
      * @description TimeUtil / getDurationBySecond
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -115,7 +130,9 @@ public class TimeUtilImpl implements TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:13
      * @description TimeUtil / millisecondsToSeconds
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -132,7 +149,9 @@ public class TimeUtilImpl implements TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:14
      * @description TimeUtil / millisecondsToMinute
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override

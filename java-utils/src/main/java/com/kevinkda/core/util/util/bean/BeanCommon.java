@@ -8,9 +8,6 @@
 
 package com.kevinkda.core.util.util.bean;
 
-import com.kevinkda.core.util.annotation.enumeration.VerifiedType;
-import com.kevinkda.core.util.annotation.func.FuncVerification;
-
 import java.util.Map;
 
 /**
@@ -21,13 +18,14 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.bean
  * @classname BeanCommon
- * @apiNote <p></p>
+ * @apiNote
  * @since 1.0.0
  */
 public interface BeanCommon {
     /**
      * 将{@link Map}对象转为JavaBean对象
      *
+     * @param <T>   传入指定类型
      * @param map   传入待转换的Map对象
      * @param clazz 传入JavaBean类型
      * @return T 返回转换后的JavaBean对象
@@ -35,9 +33,8 @@ public interface BeanCommon {
      * @author Kevin KDA on 2020/5/5 15:04
      * @description BeanCommon / toBean
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
      * @since 1.0.0
      */
-    @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 15:04")
     <T> T toBean(Map<String, Object> map, Class<T> clazz);
 }

@@ -16,7 +16,10 @@ package com.kevinkda.core.util.util.db;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.db
  * @classname BeanJdbc
- * @apiNote <p></p>
+  * @apiNote 
+ * @implSpec
+ * @implNote
+
  * @since 1.0.0
  */
 public interface BeanJdbc {

@@ -13,7 +13,9 @@ import java.lang.annotation.*;
  * @project maven-open-project
  * @package com.kevinkda.core.util.annotation.func
  * @classname TestInfo
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 //@Target(ElementType.TYPE)
@@ -27,8 +29,13 @@ public @interface TestInfo {
     /**
      * 标注测试版本号
      *
-     * @return the string
-     * @author Kevin KDA on 2020/4/17 14:59
+     * @return java.lang.String Version Number
+     * @author Kevin KDA on 2020/10/14 12:42
+     * @description TestInfo / version
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public String version() default "1.0.0";
@@ -36,8 +43,13 @@ public @interface TestInfo {
     /**
      * 标注测试状态
      *
-     * @return the verified type
-     * @author Kevin KDA on 2020/4/17 14:59
+     * @return java.lang.String the verified type
+     * @author Kevin KDA on 2020/10/14 12:42
+     * @description TestInfo / version
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public VerifiedType status() default VerifiedType.Unverified;
@@ -45,8 +57,13 @@ public @interface TestInfo {
     /**
      * 标注测试时间
      *
-     * @return the string
-     * @author Kevin KDA on 2020/4/17 14:59
+     * @return java.lang.String Test Time
+     * @author Kevin KDA on 2020/10/14 12:42
+     * @description TestInfo / version
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public String date() default "";
@@ -54,8 +71,13 @@ public @interface TestInfo {
     /**
      * 标注测试备注
      *
-     * @return the string
-     * @author Kevin KDA on 2020/4/26 15:28
+     * @return java.lang.String Note
+     * @author Kevin KDA on 2020/10/14 12:42
+     * @description TestInfo / version
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     public String note() default "";

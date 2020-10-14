@@ -18,7 +18,9 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.exception.web.impl
  * @classname ErrorCodeImpl
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -39,7 +41,7 @@ public class ErrorCodeImpl implements ErrorCode {
      * @author Kevin KDA on 2020/5/16 19:54
      * @description ErrorCodeImpl / toJson
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 1.0.0
      */
     @Override
@@ -56,7 +58,7 @@ public class ErrorCodeImpl implements ErrorCode {
      * @author Kevin KDA on 2020/5/16 19:54
      * @description ErrorCodeImpl / toJson
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/16 19:54")
@@ -69,11 +71,11 @@ public class ErrorCodeImpl implements ErrorCode {
     /**
      * 获得错误信息
      *
-     * @return java.util.Map<java.lang.String, java.lang.Object> 返回Map形式的错误信息
+     * @return {@code java.util.Map<java.lang.String, java.lang.Object>} 返回Map形式的错误信息
      * @author Kevin KDA on 2020/5/16 20:06
      * @description ErrorCodeImpl / getMessage
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/16 20:06")
@@ -87,11 +89,11 @@ public class ErrorCodeImpl implements ErrorCode {
      * 向当前错误状态域添加子错误状态域
      *
      * @param code 传入子错误状态信息
-     * @return java.util.Map<java.lang.String, java.lang.Object> 返回当前域下所有错误状态信息
+     * @return {@code java.util.Map<java.lang.String, java.lang.Object>} 返回当前域下所有错误状态信息
      * @author Kevin KDA on 2020/5/19 01:56
      * @description ErrorCodeImpl / subError
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/19 01:56")
@@ -105,11 +107,11 @@ public class ErrorCodeImpl implements ErrorCode {
      *
      * @param code    传入错误代码
      * @param subCode 传入子错误代码
-     * @return java.util.Map<java.lang.String, java.lang.Object> 返回Map形式的错误信息
+     * @return {@code java.util.Map<java.lang.String, java.lang.Object>} 返回Map形式的错误信息
      * @author Kevin KDA on 2020/5/17 02:42
      * @description ErrorCodeImpl / subError
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/17 02:42")
@@ -134,7 +136,7 @@ public class ErrorCodeImpl implements ErrorCode {
      * @author Kevin KDA on 2020/5/28 03:23
      * @description ErrorCodeImpl / put
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 3.2.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/28 03:23")
@@ -151,7 +153,7 @@ public class ErrorCodeImpl implements ErrorCode {
      * @author Kevin KDA on 2020/5/29 01:50
      * @description ErrorCodeImpl / putJwt
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote 
      * @since 3.2.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/29 01:50")

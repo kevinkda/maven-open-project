@@ -19,16 +19,22 @@ import com.kevinkda.core.util.annotation.func.FuncVerification;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.algorithm.tree
  * @classname BinaryTree
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public class BinaryTree<T> implements Comparable<T> {
     /**
      * 数据根结点
+     *
+     * @since 1.0.0
      */
     private Node root;
     /**
      * 保存数据个数
+     *
+     * @since 1.0.0
      */
     private int intCount;
 
@@ -37,10 +43,14 @@ public class BinaryTree<T> implements Comparable<T> {
 
     /**
      * 返回的数据
+     *
+     * @since 1.0.0
      */
     private Object[] returnData;
     /**
      * 脚标控制
+     *
+     * @since 1.0.0
      */
     private int foot = 0;
 
@@ -49,12 +59,13 @@ public class BinaryTree<T> implements Comparable<T> {
      * 添加数据要保存的数据
      *
      * @param data 传入需要存储的数据
-     * @return void
      * @throws NullPointerException 保存数据为空时抛出的异常
      * @author Kevin KDA on 2020/5/4 12:53
      * @description BinaryTree / add
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:53")
@@ -85,6 +96,8 @@ public class BinaryTree<T> implements Comparable<T> {
      * @description BinaryTree / toArray
      * @version 1.0.0
      * @apiNote <p>以对象数组的形式返回全部数据，如果没有数据返回 null</p>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:53")
@@ -106,11 +119,12 @@ public class BinaryTree<T> implements Comparable<T> {
      * 执行数据的删除处理
      *
      * @param data 传入需要删除的数据
-     * @return void
      * @author Kevin KDA on 2020/5/4 12:53
      * @description BinaryTree / remove
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:53")
@@ -186,7 +200,9 @@ public class BinaryTree<T> implements Comparable<T> {
      * @author Kevin KDA on 2020/5/4 12:53
      * @description BinaryTree / contains
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:53")
@@ -210,7 +226,9 @@ public class BinaryTree<T> implements Comparable<T> {
      * @author Kevin KDA on 2020/5/4 12:57
      * @description BinaryTree / compareTo
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:57")
@@ -227,25 +245,35 @@ public class BinaryTree<T> implements Comparable<T> {
      * @version 1.0.0
      * @package com.kevinkda.util.algorithm.tree
      * @classname BinaryTree<T>.Node
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     private class Node {
         /**
          * 存储数据
          * 可以进行Comparable进行数据比较
+         *
+         * @since 1.0.0
          */
         private Comparable<T> data;
         /**
          * 保存父节点
+         *
+         * @since 1.0.0
          */
         private Node parent;
         /**
          * 保存左节点
+         *
+         * @since 1.0.0
          */
         private Node left;
         /**
          * 保存右节点
+         *
+         * @since 1.0.0
          */
         private Node right;
 
@@ -256,7 +284,9 @@ public class BinaryTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 12:49
          * @description Node / Node
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         public Node(Comparable<T> data) {
@@ -267,11 +297,12 @@ public class BinaryTree<T> implements Comparable<T> {
          * 实现节点数据的适当位置的存储
          *
          * @param newNode 创建的新节点
-         * @return void
          * @author Kevin KDA on 2020/5/4 12:50
          * @description Node / addNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:50")
@@ -302,11 +333,12 @@ public class BinaryTree<T> implements Comparable<T> {
         /**
          * 实现所有数据的获取处理，按照中序遍历的形式来完成
          *
-         * @return void
          * @author Kevin KDA on 2020/5/4 12:50
          * @description Node / toArrayNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:50")
@@ -332,7 +364,9 @@ public class BinaryTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 12:51
          * @description Node / containsNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:51")
@@ -361,11 +395,12 @@ public class BinaryTree<T> implements Comparable<T> {
          *
          * @param data 比较的对象
          * @return com.kevinkda.util.algorithm.tree.BinaryTree<T>.Node 要删除的节点对象，对象一定存在
-         * @throws
          * @author Kevin KDA on 2020/5/4 12:51
          * @description Node / getRemoveNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:51")

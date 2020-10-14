@@ -16,7 +16,9 @@ import java.nio.charset.StandardCharsets;
  * @project maven-open-project
  * @package com.kevinkda.core.util.web.support
  * @classname EncodingRequest
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -34,7 +36,9 @@ public class EncodingRequest extends HttpServletRequestWrapper {
      * @author Kevin KDA on 2020/5/3 12:02
      * @description EncodingRequest / getParameter
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/3 12:02")

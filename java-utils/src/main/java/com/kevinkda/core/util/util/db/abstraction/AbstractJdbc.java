@@ -22,53 +22,68 @@ import java.util.ResourceBundle;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.db.abstraction
  * @classname
- * @apiNote <p></p>
+  * @apiNote 
+ * @implSpec
+ * @implNote
+
  * @since 1.0.0
  */
 public abstract class AbstractJdbc implements Jdbc {
     /**
      * 资源文件包路径
+     * @since 1.0.0
      */
     String strResourcePath;
 //    String strResourcePath = "com.kevinkda.resource.db.db";
     /**
      * 当前使用的数据库
+     * @since 1.0.0
      */
     static int DATABASE_CURRENTLY_IN_USE = 0;
     /**
      * 批处理最大接收数值
+     * @since 1.0.0
      */
     static int BATCH_MAX = 0;
     /**
      * 批处理当前接收数值
+     * @since 1.0.0
      */
     protected int intBatchCount = 0;
 //    /**
 //     * 数据库类型MySQL
+//     * @since 1.0.0
+
 //     */
 //    static final int MYSQL = 1;
 //    /**
 //     * 数据库类型Oracle
+//     * @since 1.0.0
 //     */
 //    static final int ORACLE = 2;
 //    /**
 //     * 数据库类型SQL Server
+//     * @since 1.0.0
 //     */
 //    static final int SQL_SERVER = 3;
     /**
      * 数据库驱动名称
+     * @since 1.0.0
      */
     protected String driver = null;
     /**
      * 数据库链接地址
+     * @since 1.0.0
      */
     protected String url = null;
     /**
      * 数据库用户名
+     * @since 1.0.0
      */
     protected String user = null;
     /**
      * 数据库用户密码
+     * @since 1.0.0
      */
     protected String pass = null;
 
@@ -92,6 +107,8 @@ public abstract class AbstractJdbc implements Jdbc {
      * <p>{@code jdbc.url}</p>
      * <p>{@code jdbc.user}</p>
      * <p>{@code jdbc.password}</p>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
     @Override
@@ -122,6 +139,8 @@ public abstract class AbstractJdbc implements Jdbc {
 //     * <ol><li>MySQL</li>
 //     * <li>Oracle</li>
 //     * <li>SQL Server</li></ol>
+// * @implSpec
+// * @implNote
 //     * @since 1.0.0
 //     */
 //    @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/4/26 15:39", note = "调用方法测试 static块")
@@ -154,9 +173,7 @@ public abstract class AbstractJdbc implements Jdbc {
 
 //    Constructor、Getter、Setter
 
-    /**
-     * Instantiates a new Abstract jdbc.
-     */
+
     public AbstractJdbc() {
     }
 

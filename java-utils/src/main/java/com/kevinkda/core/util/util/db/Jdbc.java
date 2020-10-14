@@ -22,7 +22,9 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.db
  * @classname Jdbc
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface Jdbc extends AutoCloseable {
@@ -42,6 +44,8 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     Connection getConnection();
@@ -60,6 +64,8 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     Connection getConnection(boolean flag);
@@ -84,6 +90,8 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     PreparedStatement getPreparedStatement(String sql);
@@ -107,6 +115,8 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     PreparedStatement getPreparedStatement(String sql, boolean flag);
@@ -123,9 +133,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
-     ResultSet getResultSet(String sql);
+    ResultSet getResultSet(String sql);
 
     /**
      * 提供获得ResultSet对象的方法
@@ -137,9 +149,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
-     ResultSet getResultSet(String sql, Object[] conditionValue);
+    ResultSet getResultSet(String sql, Object[] conditionValue);
 
     /**
      * 提供获得ResultSet对象的方法
@@ -153,10 +167,12 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
-     ResultSet getResultSet(String[] strTable, String[] strColumn,
-                                  String[] strConditionColumn, Object[] conditionValue);
+    ResultSet getResultSet(String[] strTable, String[] strColumn,
+                           String[] strConditionColumn, Object[] conditionValue);
 
 
     //    追加查询请求参数
@@ -170,9 +186,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / append
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     boolean append(Object[] args);
+    boolean append(Object[] args);
 
 
 //    查询操作获得List<Map<String, Object>>结果集
@@ -186,9 +204,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
-     List<Map<String, Object>> getResultListMap(String sql);
+    List<Map<String, Object>> getResultListMap(String sql);
 
     /**
      * 提供获得ResultSet中详细数据的方法，返回键值对数组供后续处理
@@ -199,10 +219,12 @@ public interface Jdbc extends AutoCloseable {
      * @author Kevin KDA on 2020/4/26 20:31
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
-     List<Map<String, Object>> getResultListMap(String sql, Object[] conditionValue);
+    List<Map<String, Object>> getResultListMap(String sql, Object[] conditionValue);
 
     /**
      * 提供获得ResultSet中详细数据的方法，返回键值对数组供后续处理
@@ -216,10 +238,12 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     List<Map<String, Object>> getResultListMap(String[] strTable, String[] strColumn,
-                                                      String[] strConditionColumn, Object[] conditionValue);
+    List<Map<String, Object>> getResultListMap(String[] strTable, String[] strColumn,
+                                               String[] strConditionColumn, Object[] conditionValue);
 
 
 //    Utils 获得List<Map<String, Object>>集合
@@ -229,14 +253,16 @@ public interface Jdbc extends AutoCloseable {
      * 私有公用方法
      *
      * @param resultSet 传入  已获取的结果集
-     * @return java.util.List<java.util.Map < java.lang.String, java.lang.Object> > 返回键值对数组，其中键为数据表中列名，值为与列对应的值
+     * @return {@code java.util.List<java.util.Map<java.lang.String, java.lang.Object>>}  返回键值对数组，其中键为数据表中列名，值为与列对应的值
      * @author Kevin KDA on 2020/4/26 20:36
      * @description JdbcImpl / getListMap
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
-     List<Map<String, Object>> getListMap(ResultSet resultSet);
+    List<Map<String, Object>> getListMap(ResultSet resultSet);
 
 
     //    获得结果集行数、列数
@@ -252,9 +278,11 @@ public interface Jdbc extends AutoCloseable {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，传入的ResultSet为空</p>
      * <p>返回结果为大于或等于1即调用成功，返回传入的ResultSet实际行数</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
-     int getResultSetCountRow(ResultSet resultSet);
+    int getResultSetCountRow(ResultSet resultSet);
 
     /**
      * 提供获得ResultSet列数的方法
@@ -267,9 +295,11 @@ public interface Jdbc extends AutoCloseable {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，传入的ResultSet为空</p>
      * <p>返回结果为大于或等于1即调用成功，返回传入的ResultSet实际行数</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
-     int getResultSetCountColumn(ResultSet resultSet);
+    int getResultSetCountColumn(ResultSet resultSet);
 
 
 //    提交ResultSet查询请求
@@ -282,9 +312,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / executeQuery
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     ResultSet executeQuery();
+    ResultSet executeQuery();
 
     /**
      * 提供统一向数据库提交查询的SQL请求
@@ -295,9 +327,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / executeQuery
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     ResultSet executeQuery(String sql);
+    ResultSet executeQuery(String sql);
 
 
 //    增删改 insert、update、delete
@@ -315,9 +349,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / singleSql
      * @version 1.1.0
      * @apiNote <p>本方法调用{@link Statement}</p>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
-     int singleSql(String sql) throws SQLException;
+    int singleSql(String sql) throws SQLException;
 
     /**
      * 提供传入完整SQL语句进行插入、更新、删除单行数据的方法
@@ -329,9 +365,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / singleSql
      * @version 1.0.0
      * @apiNote <p>本方法调用{@link PreparedStatement}</p>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
-     int singleSql(String sql, Object[] args);
+    int singleSql(String sql, Object[] args);
 
 
 //    提供基于字符串拼接的插入、更新、删除操作
@@ -347,9 +385,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / insertSingle
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int insertSingle(String strTableName, Object[] args);
+    int insertSingle(String strTableName, Object[] args);
 
     /**
      * 提供基于字符串拼接的单个数据更新方法
@@ -363,9 +403,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / updateSingle
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int updateSingle(String strTable, String[] strColumnName, Object[] args);
+    int updateSingle(String strTable, String[] strColumnName, Object[] args);
 
     /**
      * 提供基于字符串拼接的多条数据插入方法
@@ -378,9 +420,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / delete
      * @version 1.0.0
      * @apiNote <p>建议传入主键字段</p>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int delete(String strTable, String strColumnName, String strIds);
+    int delete(String strTable, String strColumnName, String strIds);
 
 
 //    非批处理提交方法
@@ -394,9 +438,11 @@ public interface Jdbc extends AutoCloseable {
      * @version 1.1.0
      * @apiNote <p>自本方法v1.1.0开始，使用此方法执行提交后将会自动关闭{@link JdbcImpl}所有链接</p>
      * @errorReport <p>向数据库更新时未自动关闭数据库链接，数据复现为JavaWeb开发中，Servlet将会持久化本类的数据库链接</p>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int executeUpdate();
+    int executeUpdate();
 
 
 //    存储过程
@@ -412,9 +458,11 @@ public interface Jdbc extends AutoCloseable {
      * @description JdbcImpl / runCallableStatement
      * @version 1.0.0
      * @apiNote <p>在使用存储过程前，请了解需要调用的存储过程所需传入的参数和返回结果</p>
+     * @implSpec
+     * @implNote
      * @since 2.1.0
      */
-     ResultSet runCallableStatement(String proc, Object[] args);
+    ResultSet runCallableStatement(String proc, Object[] args);
 
     /**
      * 调用存储过程，返回{@link CallableStatement}
@@ -427,10 +475,12 @@ public interface Jdbc extends AutoCloseable {
      * @author Kevin KDA on 2020/5/18 21:19
      * @description JdbcImpl / runCallableStatement
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     CallableStatement runCallableStatement(String proc, Object[] args, Object[] outArgs);
+    CallableStatement runCallableStatement(String proc, Object[] args, Object[] outArgs);
 
 
 //    批处理
@@ -448,9 +498,11 @@ public interface Jdbc extends AutoCloseable {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}已存在</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
-     int begin();
+    int begin();
 
     /**
      * 提交事务
@@ -461,9 +513,11 @@ public interface Jdbc extends AutoCloseable {
      * @version 1.1.0
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
-     int commitTransaction();
+    int commitTransaction();
 
     /**
      * 回滚事务
@@ -475,9 +529,11 @@ public interface Jdbc extends AutoCloseable {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
-     int rollback();
+    int rollback();
 
     /**
      * 设置自动提交关闭
@@ -489,9 +545,11 @@ public interface Jdbc extends AutoCloseable {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 2.0.0
      */
-     int changeAutoCommit();
+    int changeAutoCommit();
 
 
 //    批处理追加数据方法
@@ -514,9 +572,11 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link Statement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
-     int add(String sql);
+    int add(String sql);
 
     /**
      * 提供插入、更新、删除多行数据的方法
@@ -538,9 +598,11 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link Statement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
-     int add(String[] sql);
+    int add(String[] sql);
 
     /**
      * 提供插入、更新、删除单行数据的方法
@@ -560,9 +622,11 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0
      */
-     int addBatch(Object[] args);
+    int addBatch(Object[] args);
 
 
 //    批处理提交数据方法
@@ -585,9 +649,11 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int executeBatch();
+    int executeBatch();
 
     /**
      * 提供统一向数据库提交的方法 批处理
@@ -608,9 +674,11 @@ public interface Jdbc extends AutoCloseable {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
-     int executeBatch(int type);
+    int executeBatch(int type);
 
 
 //    实现AutoCloseable接口
@@ -618,29 +686,31 @@ public interface Jdbc extends AutoCloseable {
     /**
      * 保持数据库链接，关闭其他数据对象
      *
-     * @return void
      * @author Kevin KDA on 2020/5/12 11:50
      * @description JdbcImpl / closePart
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/12 11:50")
-     void closePart();
+    void closePart();
 
     /**
      * 实现AutoCloseable接口 关闭数据库链接
      *
-     * @return void
      * @throws Exception AutoClosed
      * @author Kevin KDA on 2020/4/26 16:04
      * @description JdbcImpl / close
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
-     void close() throws Exception;
+    void close() throws Exception;
 
 
 //    Constructor、Getter、Setter
@@ -651,30 +721,30 @@ public interface Jdbc extends AutoCloseable {
      *
      * @return the statement
      */
-     Statement getStatement();
+    Statement getStatement();
 
     /**
      * Gets prepared statement.
      *
      * @return the prepared statement
      */
-     PreparedStatement getPreparedStatement();
+    PreparedStatement getPreparedStatement();
 
     /**
      * Gets callable statement.
      *
      * @return the callable statement
      */
-     CallableStatement getCallableStatement();
+    CallableStatement getCallableStatement();
 
     /**
      * Gets result set.
      *
      * @return the result set
      */
-     ResultSet getResultSet();
+    ResultSet getResultSet();
 
-    
+
     /**
      * 当本程序作为第三方库被调用/依赖时，使用此方法
      *
@@ -692,6 +762,8 @@ public interface Jdbc extends AutoCloseable {
      * <p>{@code jdbc.url}</p>
      * <p>{@code jdbc.user}</p>
      * <p>{@code jdbc.password}</p>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
     boolean use(String path);

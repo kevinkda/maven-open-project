@@ -8,16 +8,22 @@ import java.io.Serializable;
  * @project maven-open-project
  * @package com.kevinkda.core.util.security
  * @classname Key
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface Key extends Serializable {
     /**
      * 存储数据公钥名
+     *
+     * @since 1.0.0
      */
     public static final String PUBLIC = "public";
     /**
      * 存储数据私钥名
+     *
+     * @since 1.0.0
      */
     public static final String PRIVATE = "private";
 

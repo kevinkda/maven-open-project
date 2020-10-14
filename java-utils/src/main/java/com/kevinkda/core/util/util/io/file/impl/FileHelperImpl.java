@@ -22,22 +22,30 @@ import java.io.*;
  * @version 1.0.0
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io.file.impl
- * @classname FileHelperImpl<T>
- * @apiNote <p></p>
+ * @classname {@code FileHelperImpl<T>}
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
 public class FileHelperImpl<T> implements FileHelper<T> {
     /**
      * 请求打开文件的路径
+     *
+     * @since 1.0.0
      */
     private String src;
     /**
      * 存储打开文件的对象
+     *
+     * @since 1.0.0
      */
     private File file;
     /**
      * 存储流对象
+     *
+     * @since 1.0.0
      */
     private OutputStream outputStream;
 
@@ -51,7 +59,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copy
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -81,7 +91,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copyFile
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -144,7 +156,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copyFileEarly
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -192,7 +206,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:26
      * @description FileUtil / copyDir
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -215,7 +231,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:27
      * @description FileUtil / copyDirImpl
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:27")
@@ -247,7 +265,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:27
      * @description FileUtil / open
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -277,7 +297,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:28
      * @description FileUtil / read
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -294,7 +316,9 @@ public class FileHelperImpl<T> implements FileHelper<T> {
      * @author Kevin KDA on 2020/5/4 13:29
      * @description FileUtil / write
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -327,11 +351,12 @@ public class FileHelperImpl<T> implements FileHelper<T> {
     /**
      * 关闭文件
      *
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:28
      * @description FileUtil / close
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override

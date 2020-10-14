@@ -19,8 +19,10 @@ import java.io.OutputStream;
  * @version 1.0.0
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io.file
- * @classname FileHelper<T>
- * @apiNote <p></p>
+ * @classname {@code FileHelper<T>}
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface FileHelper<T> extends IFile<T> {
@@ -29,11 +31,12 @@ public interface FileHelper<T> extends IFile<T> {
      * 列出文件路径或目录下所有内容
      *
      * @param file 传入文件或文件夹路径
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:24
      * @description FileUtil / listDir
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     static void listDir(File file) {
@@ -56,11 +59,12 @@ public interface FileHelper<T> extends IFile<T> {
      * 更改目录名
      *
      * @param file 传入文件或文件夹路径
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:24
      * @description FileUtil / listDir
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     static void renameDir(File file) {
@@ -99,7 +103,9 @@ public interface FileHelper<T> extends IFile<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copy
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     boolean copy(String src, String des);
@@ -113,7 +119,9 @@ public interface FileHelper<T> extends IFile<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copyFile
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     boolean copyFile(File srcFile, File desFile);
@@ -127,7 +135,9 @@ public interface FileHelper<T> extends IFile<T> {
      * @author Kevin KDA on 2020/5/4 13:25
      * @description FileUtil / copyFileEarly
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     boolean copyFileEarly(File srcFile, File desFile);
@@ -141,7 +151,9 @@ public interface FileHelper<T> extends IFile<T> {
      * @author Kevin KDA on 2020/5/4 13:26
      * @description FileUtil / copyDir
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     boolean copyDir(File srcFile, File desFile);

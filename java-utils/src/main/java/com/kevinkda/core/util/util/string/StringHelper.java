@@ -22,7 +22,9 @@ import java.nio.charset.StandardCharsets;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.string
  * @classname StringHelper
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public class StringHelper {
@@ -34,7 +36,9 @@ public class StringHelper {
      * @author Kevin KDA on 2020/5/5 20:59
      * @description StringProcess / initialLowercase
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 20:59")
@@ -51,7 +55,9 @@ public class StringHelper {
      * @author Kevin KDA on 2020/5/5 21:00
      * @description StringProcess / initialUppercase
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 21:00")
@@ -67,7 +73,9 @@ public class StringHelper {
      * @author Kevin KDA on 2020/5/8 09:46
      * @description StringProcess / getUtfStringFromHtml
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/8 09:46")
@@ -87,7 +95,9 @@ public class StringHelper {
      * @author Kevin KDA on 2020/5/8 09:44
      * @description StringProcess / getUtfStringsFromHtml
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/8 09:44")

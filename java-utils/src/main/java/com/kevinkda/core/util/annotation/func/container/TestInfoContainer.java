@@ -12,7 +12,9 @@ import java.lang.annotation.*;
  * @project maven-open-project
  * @package com.kevinkda.core.util.annotation.func.container
  * @classname TestInfoContainer
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 //@Target(ElementType.TYPE)

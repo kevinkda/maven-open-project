@@ -26,7 +26,7 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.bean.impl
  * @classname
- * @apiNote <p></p>
+ * @apiNote
  * @since 1.0.0
  */
 @Service
@@ -36,6 +36,7 @@ public class BeanCommonImpl implements BeanCommon {
     /**
      * 将{@link Map}对象转为JavaBean对象
      *
+     * @param <T>   传入指定类型
      * @param map   传入待转换的Map对象
      * @param clazz 传入JavaBean类型
      * @return T 返回转换后的JavaBean对象
@@ -43,7 +44,7 @@ public class BeanCommonImpl implements BeanCommon {
      * @author Kevin KDA on 2020/5/5 15:04
      * @description BeanCommon / toBean
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
      * @since 1.0.0
      */
     @Override

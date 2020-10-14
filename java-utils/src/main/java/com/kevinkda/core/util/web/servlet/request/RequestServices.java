@@ -17,7 +17,9 @@ import java.util.*;
  * @project maven-open-project
  * @package com.kevinkda.core.util.web.servlet.request
  * @classname RequestServices
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -33,6 +35,8 @@ public class RequestServices {
      * @apiNote <p>本方法返回{@link HttpServletRequest}包含的请求头和请求体数据</p>
      * <p>其中数组下标0是请求头数据</p>
      * <p>其中数组下标1是请求体数据</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/11 21:46")
@@ -56,7 +60,9 @@ public class RequestServices {
      * @author Kevin KDA on 2020/5/1 14:37
      * @description RequestServices / getRequestHead
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.0.5
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/1 14:37")
@@ -86,7 +92,9 @@ public class RequestServices {
      * @author Kevin KDA on 2020/5/11 21:54
      * @description RequestServices / getRequestBody
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/11 21:54")
@@ -131,11 +139,12 @@ public class RequestServices {
      * 打印所有参数
      *
      * @param map 传入已获得的请求参数，需为 {@code Map<String, Object>} 对象
-     * @return void 本方法直接输出，无返回值
      * @author Kevin KDA on 2020/5/11 22:15
      * @description RequestServices / printParameters
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote <p>本方法直接输出，无返回值</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/11 22:15")
@@ -157,7 +166,9 @@ public class RequestServices {
      * @author Kevin KDA on 2020/5/11 22:15
      * @description RequestServices / showParameters
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/11 22:15")
@@ -181,7 +192,9 @@ public class RequestServices {
      * @author Kevin KDA on 2020/5/1 14:30
      * @description RequestServices / getPostBody
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.0.5
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/1 14:30", note = "依赖测试")
@@ -217,6 +230,8 @@ public class RequestServices {
      * @apiNote <p>本方法返回{@link HttpServletRequest}包含的请求头和请求体数据</p>
      * <p>其中数组下标0是请求头数据</p>
      * <p>其中数组下标1是请求体数据</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     public List<Map<?, ?>> getParametersForJson(HttpServletRequest request) {

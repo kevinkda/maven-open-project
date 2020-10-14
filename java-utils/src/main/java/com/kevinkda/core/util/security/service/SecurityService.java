@@ -6,7 +6,9 @@ package com.kevinkda.core.util.security.service;
  * @project maven-open-project
  * @package com.kevinkda.core.util.security.service
  * @classname SecurityService
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface SecurityService {

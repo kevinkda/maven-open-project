@@ -30,7 +30,9 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.db.impl
  * @classname
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -51,7 +53,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 23:07
      * @description BeanJdbcImpl / getBean
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 23:07")
@@ -69,6 +73,8 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @description BeanJdbcImpl / getBean
      * @version 1.0.0
      * @apiNote <p>使用本方法需在数据库链接URL中添加{@code useOldAliasMetadataBehavior=true}</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 19:28")
@@ -116,7 +122,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 23:16
      * @description BeanJdbcImpl / getBean
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 23:16")
@@ -138,7 +146,8 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @description BeanJdbcImpl / getBeanByClass
      * @version 1.0.0
      * @apiNote <p>本方法需要传入Class对象类型</p>
-     * <p></p>
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 23:07")
@@ -156,7 +165,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 22:59
      * @description BeanJdbcImpl / getBeanByClass
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 22:59")
@@ -207,7 +218,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 23:07
      * @description BeanJdbcImpl / getBeanByClass
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 23:07")
@@ -228,7 +241,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 19:09
      * @description BeanJdbcImpl / getBeanByMap
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 19:09")
@@ -245,7 +260,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 19:03
      * @description BeanJdbcImpl / getBeanByMap
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 19:03")
@@ -287,7 +304,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 19:14
      * @description BeanJdbcImpl / getBeanByMap
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 19:14")
@@ -308,7 +327,9 @@ public class BeanJdbcImpl<T> implements BeanJdbc {
      * @author Kevin KDA on 2020/5/5 21:21
      * @description BeanJdbcImpl / checkFieldName
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.1
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/5 21:21")

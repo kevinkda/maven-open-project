@@ -17,7 +17,9 @@ import java.sql.Connection;
  * @project maven-open-project
  * @package com.kevinkda.core.util.web.servlet.request
  * @classname GetTheCurrentJndiResourceServlet
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @WebServlet(name = "GetTheCurrentJndiResourceServlet", urlPatterns = "/GetTheCurrentJndiResourceServlet")

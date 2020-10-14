@@ -19,16 +19,22 @@ import com.kevinkda.core.util.annotation.func.FuncVerification;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.algorithm.tree
  * @classname RebBlackTree
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public class RebBlackTree<T> implements Comparable<T> {
     /**
      * 数据根结点
+     *
+     * @since 1.0.0
      */
     private Node root;
     /**
      * 保存数据个数
+     *
+     * @since 1.0.0
      */
     private int intCount;
 
@@ -36,21 +42,32 @@ public class RebBlackTree<T> implements Comparable<T> {
 //        二叉树功能实现
     /**
      * 返回的数据
+     *
+     * @since 1.0.0
      */
     private Object[] returnData;
     /**
      * 脚标控制
+     *
+     * @since 1.0.0
      */
     private int foot = 0;
 
 
     /**
-     * @param data: 传入需要存储的数据
-     * @return void
+     * 添加数据要保存的数据
+     *
+     * @param data 传入需要存储的数据
      * @throws NullPointerException 保存数据为空时抛出的异常
-     * @author Kevin KDA on 2020/3/15 19:48
-     * @description Node / add 添加数据要保存的数据
+     * @author Kevin KDA on 2020/10/14 12:49
+     * @description RebBlackTree / add
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
      */
+    @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/10/14 12:49")
     public void add(Comparable<T> data) {
         if (data == null) {
             throw new NullPointerException("保存数据不允许为空");
@@ -71,10 +88,18 @@ public class RebBlackTree<T> implements Comparable<T> {
     }
 
     /**
-     * @return Object[] 返回全部数据
-     * @author Kevin KDA on 2020/3/15 20:15
-     * @description BinaryTree / toArray 以对象数组的形式返回全部数据，如果没有数据返回 nu11
+     * 以对象数组的形式返回全部数据，如果没有数据返回 nu11
+     *
+     * @return java.lang.Object[] 返回全部数据
+     * @author Kevin KDA on 2020/10/14 12:52
+     * @description RebBlackTree / toArray
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
      */
+    @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/10/14 12:52")
     public Object[] toArray() {
         if (intCount == 0) {
             return null;
@@ -90,11 +115,18 @@ public class RebBlackTree<T> implements Comparable<T> {
     }
 
     /**
-     * @param data: 传入需要删除的数据
-     * @return void
-     * @author Kevin KDA on 2020/3/15 20:39
-     * @description BinaryTree / remove 执行数据的删除处理
+     * 执行数据的删除处理
+     *
+     * @param data 传入需要删除的数据
+     * @author Kevin KDA on 2020/10/14 12:52
+     * @description RebBlackTree / remove
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
      */
+    @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/10/14 12:52")
     public void remove(Comparable<T> data) {
 //        根节点不存在
         if (root == null) {
@@ -160,11 +192,19 @@ public class RebBlackTree<T> implements Comparable<T> {
     }
 
     /**
-     * @param data:要比较的数据
+     * 现在的检素主要依靠的是 Comparable实现的据比较
+     *
+     * @param data 要比较的数据
      * @return boolean 查找到数据返回 true，否则返回 False
-     * @author Kevin KDA on 2020/3/15 20:46
-     * @description BinaryTree / contains 现在的检素主要依靠的是 Comparable实现的据比较
+     * @author Kevin KDA on 2020/10/14 12:53
+     * @description RebBlackTree / contains
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
      */
+    @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/10/14 12:53")
     private boolean contains(Comparable<T> data) {
         if (this.intCount == 0) {
             return false;
@@ -185,7 +225,9 @@ public class RebBlackTree<T> implements Comparable<T> {
      * @author Kevin KDA on 2020/5/4 12:57
      * @description RebBlackTree / compareTo
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 12:57")
@@ -202,7 +244,9 @@ public class RebBlackTree<T> implements Comparable<T> {
      * @version 1.0.0
      * @package com.kevinkda.util.algorithm.tree
      * @classname RebBlackTree<T>.Color
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     private enum Color {
@@ -224,7 +268,9 @@ public class RebBlackTree<T> implements Comparable<T> {
      * @version 1.0.0
      * @package com.kevinkda.util.algorithm.tree
      * @classname RebBlackTree<T>.Node
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     private class Node {
@@ -257,7 +303,9 @@ public class RebBlackTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 13:03
          * @description Node / Node
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         public Node(Comparable<T> data) {
@@ -273,7 +321,9 @@ public class RebBlackTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 13:03
          * @description Node / addNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:03")
@@ -308,7 +358,9 @@ public class RebBlackTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 13:03
          * @description Node / toArrayNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:03")
@@ -334,7 +386,9 @@ public class RebBlackTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 13:03
          * @description Node / containsNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:03")
@@ -366,7 +420,9 @@ public class RebBlackTree<T> implements Comparable<T> {
          * @author Kevin KDA on 2020/5/4 13:03
          * @description Node / getRemoveNode
          * @version 1.0.0
-         * @apiNote <p></p>
+         * @apiNote
+         * @implSpec
+         * @implNote
          * @since 1.0.0
          */
         @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:03")

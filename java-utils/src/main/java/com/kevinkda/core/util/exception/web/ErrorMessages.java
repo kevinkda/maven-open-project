@@ -8,7 +8,9 @@ import java.io.Serializable;
  * @project maven-open-project
  * @package com.kevinkda.core.util.exception.web
  * @classname ErrorMessages
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface ErrorMessages extends Serializable {

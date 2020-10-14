@@ -19,18 +19,21 @@ import com.kevinkda.core.util.annotation.func.FuncVerification;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.date
  * @classname TimeUtil
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface TimeUtil {
     /**
      * 开始计时
      *
-     * @return void
      * @author Kevin KDA on 2020/5/4 13:11
      * @description TimeUtil / startTime
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:11")
@@ -43,7 +46,9 @@ public interface TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:11
      * @description TimeUtil / stopTime
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:11")
@@ -56,7 +61,9 @@ public interface TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:12
      * @description TimeUtil / getDurationByMillisecond
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:12")
@@ -69,7 +76,9 @@ public interface TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:13
      * @description TimeUtil / getDurationBySecond
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:13")
@@ -83,7 +92,9 @@ public interface TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:13
      * @description TimeUtil / millisecondsToSeconds
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:13")
@@ -97,7 +108,9 @@ public interface TimeUtil {
      * @author Kevin KDA on 2020/5/4 13:14
      * @description TimeUtil / millisecondsToMinute
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Unverified, date = "2020/5/4 13:14")

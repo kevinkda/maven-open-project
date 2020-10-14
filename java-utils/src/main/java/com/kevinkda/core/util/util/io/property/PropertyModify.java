@@ -13,19 +13,22 @@ import java.io.IOException;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io
  * @classname PropertyModify
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface PropertyModify {
     /**
      * 加载文件
      *
-     * @return void
      * @throws IOException 文件不存在
      * @author Kevin KDA on 2020/5/24 21:47
      * @description PropertyModify / load
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/24 21:47")
@@ -36,12 +39,14 @@ public interface PropertyModify {
      *
      * @param key   属性键
      * @param value 属性值
+     * @return boolean
      * @author Kevin KDA on 2020/5/24 21:46
      * @description PropertyModify / optionProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
-     * @return
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/24 21:46")
     boolean optionProperty(String key, String value);
@@ -55,7 +60,9 @@ public interface PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:45
      * @description PropertyModify / updateProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/24 21:45")
@@ -66,11 +73,13 @@ public interface PropertyModify {
      *
      * @param key   属性键
      * @param value 属性值
-     * @return java.lang.Boolean 返回状态值
+     * @return boolean 返回状态值
      * @author Kevin KDA on 2020/5/24 21:44
      * @description PropertyModify / addProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/24 21:44")
@@ -84,7 +93,9 @@ public interface PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:43
      * @description PropertyModify / getProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/24 21:43")

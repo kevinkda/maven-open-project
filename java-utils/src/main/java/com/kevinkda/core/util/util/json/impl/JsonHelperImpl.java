@@ -27,7 +27,9 @@ import java.util.Map;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.json.impl
  * @classname
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -48,7 +50,9 @@ public class JsonHelperImpl implements JsonHelper {
      * @author Kevin KDA on 2020/5/10 00:08
      * @description JsonProcess / getJsonp
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -66,7 +70,9 @@ public class JsonHelperImpl implements JsonHelper {
      * @author Kevin KDA on 2020/5/10 00:08
      * @description JsonProcess / getJsonp
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -86,6 +92,8 @@ public class JsonHelperImpl implements JsonHelper {
      * @apiNote <p>本方法将尝试获取两种类型的回调函数名，即callback和cb，若两种均不存在将返回错误代码</p>
      * <p>正确返回结果包含两个Key，即 status 和 callback</p>
      * <p>错误返回结果包含两个Key，即 status 和 errorCode</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -121,7 +129,9 @@ public class JsonHelperImpl implements JsonHelper {
      * @author Kevin KDA on 2020/5/17 15:45
      * @description JsonProcess / getCallback
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -148,6 +158,8 @@ public class JsonHelperImpl implements JsonHelper {
      * @apiNote <p>本方法将尝试获取两种类型的回调函数名，即callback和cb，若两种均不存在将返回错误代码</p>
      * <p>正确返回结果包含两个Key，即 status 和 callback</p>
      * <p>错误返回结果包含两个Key，即 status 和 errorCode</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -183,7 +195,9 @@ public class JsonHelperImpl implements JsonHelper {
      * @author Kevin KDA on 2020/5/12 01:43
      * @description JsonProcess / getJson
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -197,11 +211,13 @@ public class JsonHelperImpl implements JsonHelper {
      *
      * @param dataA 被合并Map
      * @param dataB 合并数据
-     * @return java.util.Map<java.lang.String, java.lang.Object>
+     * @return {@code java.util.Map<java.lang.String, java.lang.Object>}
      * @author Kevin KDA on 2020/5/12 02:54
      * @description JsonProcess / merge
      * @version 1.0.0
      * @apiNote <p>本方法将会把dataB合并至dataA</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -223,6 +239,8 @@ public class JsonHelperImpl implements JsonHelper {
      * @description JsonProcess / backResult
      * @version 1.0.0
      * @apiNote <p>预期返回结果为适应JavaScript，生成JSON数据后序列化为String返回</p>
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -247,7 +265,9 @@ public class JsonHelperImpl implements JsonHelper {
      * @author Kevin KDA on 2020/5/10 00:28
      * @description JsonProcess / backError
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override

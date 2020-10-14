@@ -18,21 +18,29 @@ import java.util.Properties;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io.property.impl
  * @classname
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
 public class PropertyModifyImpl implements PropertyModify {
     /**
      * Properties
+     *
+     * @since 1.0.0
      */
     private Properties properties;
     /**
      * 文件路径
+     *
+     * @since 1.0.0
      */
     private String propertiesUrl;
     /**
      * 文件名
+     *
+     * @since 1.0.0
      */
     private String propertiesName;
 //    src/main/resources/version.properties
@@ -41,12 +49,13 @@ public class PropertyModifyImpl implements PropertyModify {
     /**
      * 加载文件
      *
-     * @return void
      * @throws IOException 文件不存在
      * @author Kevin KDA on 2020/5/24 21:47
      * @description PropertyModify / load
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -67,7 +76,9 @@ public class PropertyModifyImpl implements PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:46
      * @description PropertyModify / optionProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -95,7 +106,9 @@ public class PropertyModifyImpl implements PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:45
      * @description PropertyModify / updateProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -116,7 +129,9 @@ public class PropertyModifyImpl implements PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:44
      * @description PropertyModify / addProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -136,7 +151,9 @@ public class PropertyModifyImpl implements PropertyModify {
      * @author Kevin KDA on 2020/5/24 21:43
      * @description PropertyModify / getProperty
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override

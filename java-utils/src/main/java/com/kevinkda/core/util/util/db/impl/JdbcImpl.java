@@ -39,6 +39,8 @@ import java.util.Map;
  * <p>此封装类已尽可能的对{@link Exception}进行{@code try}捕获，
  * 不可避免的这可能将会导致后续程序的在特定情况下产生{@link NullPointerException}。</p>
  * <p>自本方法v3.1.0开始，使用本类执行提交后将会自动关闭{@link JdbcImpl}所有链接</p>
+ * @implSpec
+ * @implNote
  * @since 1.0.0 (JDK 1.7)
  */
 @Service
@@ -48,22 +50,32 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
 
     /**
      * Connection
+     *
+     * @since 1.0.0
      */
     private Connection connection;
     /**
      * Statement
+     *
+     * @since 1.0.0
      */
     private Statement statement;
     /**
      * PreparedStatement
+     *
+     * @since 1.0.0
      */
     private PreparedStatement preparedStatement;
     /**
      * CallableStatement
+     *
+     * @since 1.0.0
      */
     private CallableStatement callableStatement;
     /**
      * ResultSet
+     *
+     * @since 1.0.0
      */
     private ResultSet resultSet;
 
@@ -84,6 +96,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -106,6 +120,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -145,6 +161,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -172,6 +190,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -205,6 +225,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
     @Override
@@ -223,6 +245,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
     @Override
@@ -245,6 +269,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / getResultSet
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.2.0
      */
     @Override
@@ -268,6 +294,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / append
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -298,6 +326,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
     @Override
@@ -315,7 +345,9 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @author Kevin KDA on 2020/4/26 20:31
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
     @Override
@@ -336,6 +368,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / getResultListMap
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -353,11 +387,13 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * 私有公用方法
      *
      * @param resultSet 传入  已获取的结果集
-     * @return java.util.List<java.util.Map < java.lang.String, java.lang.Object> > 返回键值对数组，其中键为数据表中列名，值为与列对应的值
+     * @return {@code java.util.List<java.util.Map<java.lang.String, java.lang.Object>>} 返回键值对数组，其中键为数据表中列名，值为与列对应的值
      * @author Kevin KDA on 2020/4/26 20:36
      * @description JdbcImpl / getListMap
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.1.0
      */
     @Override
@@ -397,6 +433,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，传入的ResultSet为空</p>
      * <p>返回结果为大于或等于1即调用成功，返回传入的ResultSet实际行数</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
     @Override
@@ -427,6 +465,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，传入的ResultSet为空</p>
      * <p>返回结果为大于或等于1即调用成功，返回传入的ResultSet实际行数</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
     @Override
@@ -453,6 +493,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / executeQuery
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -475,6 +517,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / executeQuery
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -501,6 +545,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / singleSql
      * @version 1.1.0
      * @apiNote <p>本方法调用{@link Statement}</p>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -521,6 +567,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / singleSql
      * @version 1.0.0
      * @apiNote <p>本方法调用{@link PreparedStatement}</p>
+     * @implSpec
+     * @implNote
      * @since 1.5.0
      */
     @Override
@@ -545,6 +593,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / insertSingle
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -577,6 +627,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / updateSingle
      * @version 1.1.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -618,6 +670,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / delete
      * @version 1.0.0
      * @apiNote <p>建议传入主键字段</p>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -643,6 +697,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @version 1.1.0
      * @apiNote <p>自本方法v1.1.0开始，使用此方法执行提交后将会自动关闭{@link JdbcImpl}所有链接</p>
      * @errorReport <p>向数据库更新时未自动关闭数据库链接，数据复现为JavaWeb开发中，Servlet将会持久化本类的数据库链接</p>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -678,6 +734,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / runCallableStatement
      * @version 1.0.0
      * @apiNote <p>在使用存储过程前，请了解需要调用的存储过程所需传入的参数和返回结果</p>
+     * @implSpec
+     * @implNote
      * @since 2.1.0
      */
     @Override
@@ -707,7 +765,9 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @author Kevin KDA on 2020/5/18 21:19
      * @description JdbcImpl / runCallableStatement
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @FuncVerification(version = "1.0.0", status = VerifiedType.Error, date = "2020/5/18 21:19")
@@ -746,6 +806,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}已存在</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
     @Override
@@ -773,6 +835,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @version 1.1.0
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
     @Override
@@ -802,6 +866,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 1.3.0
      */
     @Override
@@ -831,6 +897,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @apiNote <p>返回结果为-1即调用失败</p>
      * <p>返回结果为0即调用成功，{@code connection}不存在，需重新开启事务</p>
      * <p>返回结果为等于1即调用成功</p>
+     * @implSpec
+     * @implNote
      * @since 2.0.0
      */
     @Override
@@ -869,6 +937,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link Statement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
     @Override
@@ -923,6 +993,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link Statement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 3.0.0
      */
     @Override
@@ -991,6 +1063,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0
      */
     @Override
@@ -1033,6 +1107,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -1091,6 +1167,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * <li>使用{@code addBatch()}向{@link PreparedStatement}追加参数</li>
      * <li>使用{@code executeBatch()}提交批处理</li>
      * <li>清楚批处理缓存</li></ol>
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -1138,11 +1216,12 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
     /**
      * 保持数据库链接，关闭其他数据对象
      *
-     * @return void
      * @author Kevin KDA on 2020/5/12 11:50
      * @description JdbcImpl / closePart
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.1.2
      */
     @Override
@@ -1169,12 +1248,13 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
     /**
      * 实现AutoCloseable接口 关闭数据库链接
      *
-     * @return void
      * @throws Exception AutoClosed
      * @author Kevin KDA on 2020/4/26 16:04
      * @description JdbcImpl / close
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     @Override
@@ -1206,6 +1286,8 @@ public class JdbcImpl extends AbstractJdbc implements Jdbc {
      * @description JdbcImpl / JdbcImpl
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.0.4
      */
     public JdbcImpl(String path) {

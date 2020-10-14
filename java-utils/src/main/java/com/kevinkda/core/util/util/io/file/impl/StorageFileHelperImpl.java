@@ -26,7 +26,10 @@ import java.util.Objects;
  * @project maven-open-project
  * @package com.kevinkda.core.util.util.io.file.impl
  * @classname
- * @apiNote <p></p>
+  * @apiNote 
+ * @implSpec
+ * @implNote
+
  * @since 1.0.0
  */
 @Service
@@ -40,7 +43,10 @@ public class StorageFileHelperImpl<T> implements Serializable, StorageFileHelper
      * @author Kevin KDA on 2020/5/4 13:20
      * @description StorageFile / storage
      * @version 1.0.0
-     * @apiNote <p></p>
+      * @apiNote 
+ * @implSpec
+ * @implNote
+
      * @since 1.0.0
      */
     @Override
@@ -77,7 +83,10 @@ public class StorageFileHelperImpl<T> implements Serializable, StorageFileHelper
      * @author Kevin KDA on 2020/5/4 13:22
      * @description StorageFile / storage
      * @version 1.0.0
-     * @apiNote <p></p>
+      * @apiNote 
+ * @implSpec
+ * @implNote
+
      * @since 1.0.0
      */
     @Override
@@ -106,14 +115,17 @@ public class StorageFileHelperImpl<T> implements Serializable, StorageFileHelper
     }
 
     /**
-     * 读取文件并返回List<T>数据，如文件不存在直接返回null
+     * 读取文件并返回{@code List<T>}数据，如文件不存在直接返回null
      *
      * @param filepath 传入读取文件路径
-     * @return java.util.List<T> 传入读取文件获得的列表
+     * @return {@code java.util.List<T>} 传入读取文件获得的列表
      * @author Kevin KDA on 2020/5/4 13:22
      * @description StorageFile / readList
      * @version 1.0.0
-     * @apiNote <p></p>
+      * @apiNote 
+ * @implSpec
+ * @implNote
+
      * @since 1.0.0
      */
     @Override
@@ -152,7 +164,10 @@ public class StorageFileHelperImpl<T> implements Serializable, StorageFileHelper
      * @author Kevin KDA on 2020/5/4 13:21
      * @description StorageFile / readObject
      * @version 1.0.0
-     * @apiNote <p></p>
+      * @apiNote 
+ * @implSpec
+ * @implNote
+
      * @since 1.0.0
      */
     @Override

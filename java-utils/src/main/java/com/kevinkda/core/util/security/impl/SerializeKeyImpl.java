@@ -19,8 +19,10 @@ import java.util.List;
  * @version 1.0.0
  * @project maven-open-project
  * @package com.kevinkda.core.util.security.impl
- * @classname
- * @apiNote <p></p>
+ * @classname SerializeKeyImpl
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
@@ -33,7 +35,9 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @author Kevin KDA on 2020/5/26 22:04
      * @description SerializeKey / encode
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -50,7 +54,9 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @author Kevin KDA on 2020/5/26 22:04
      * @description SerializeKey / encode
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -67,7 +73,9 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @author Kevin KDA on 2020/5/26 22:04
      * @description SerializeKey / encode
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -86,6 +94,8 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @version 1.0.0
      * @apiNote <p>返回数据下标0：私钥编码</p>
      * <p>返回数据下标1：公钥编码</p>
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -106,7 +116,9 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @author Kevin KDA on 2020/5/26 22:15
      * @description SerializeKey / decode
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -124,6 +136,8 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @description SerializeKey / decode
      * @version 1.0.0
      * @apiNote <p>本方法仅限传入2个参数，回调顺序与调用方法传入顺序一致</p>
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override
@@ -144,7 +158,9 @@ public class SerializeKeyImpl extends AbstractKey implements SerializeKey {
      * @author Kevin KDA on 2020/5/26 22:17
      * @description SerializeKey / decode
      * @version 1.0.0
-     * @apiNote <p></p>
+     * @apiNote
+     * @implSpec
+     * @implNote
      * @since 3.2.0
      */
     @Override

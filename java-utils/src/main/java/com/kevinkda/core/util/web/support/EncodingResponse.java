@@ -16,13 +16,17 @@ import java.io.PrintWriter;
  * @project maven-open-project
  * @package com.kevinkda.core.util.web.support
  * @classname EncodingResponse
- * @apiNote <p></p>
+ * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 @Service
 public class EncodingResponse extends HttpServletResponseWrapper {
     /**
      * 修改字符编码的 Request
+     *
+     * @since 1.0.0
      */
     private HttpServletResponse resp;
 
