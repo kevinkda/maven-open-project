@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: java-utils
+
+#utils:
+#  regex:
+#    rule:
+#      #      email: "^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$"
+#      email: "\\^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$"
+
+jwt:
+  algorithm: "HS256"
+  type: "JWT"
+  issuer: ""
+  exptime: ""
+  subject: ""
+  audience: ""
+  notbefore: ""
+  issuedat: ""
+  jwtid: ""

@@ -19,6 +19,8 @@ import java.util.Map;
  * @package com.kevinkda.core.util.util.bean
  * @classname BeanCommon
  * @apiNote
+ * @implSpec
+ * @implNote
  * @since 1.0.0
  */
 public interface BeanCommon {
@@ -34,7 +36,25 @@ public interface BeanCommon {
      * @description BeanCommon / toBean
      * @version 1.0.0
      * @apiNote
+     * @implSpec
+     * @implNote
      * @since 1.0.0
      */
     <T> T toBean(Map<String, Object> map, Class<T> clazz);
+
+    /**
+     * 实现指定对象的属性设置
+     *
+     * @param o     要进行反射操作的实例化对象
+     * @param value 包含有指定内容的字符串，格式"属性：内容｜属性：内容"
+     * @author Kevin KDA on 2020/5/4 13:52
+     * @description BeanUtils / setValue
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
+     */
+    public void setValue(Object o, String value);
+
 }

@@ -13,7 +13,7 @@ import com.kevinkda.core.util.annotation.func.FuncVerification;
 import com.kevinkda.core.util.util.db.BeanJdbc;
 import com.kevinkda.core.util.util.db.Jdbc;
 import com.kevinkda.core.util.util.db.util.SqlStringHelper;
-import com.kevinkda.core.util.util.string.StringHelper;
+import com.kevinkda.core.util.util.string.impl.StringHelper;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
