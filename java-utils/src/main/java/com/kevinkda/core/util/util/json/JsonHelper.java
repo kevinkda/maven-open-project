@@ -8,6 +8,8 @@
 
 package com.kevinkda.core.util.util.json;
 
+import com.alibaba.fastjson.JSON;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
@@ -23,6 +25,23 @@ import java.util.Map;
  * @since 1.0.0
  */
 public interface JsonHelper {
+
+    /**
+     * 将传入数据转换成JSON字符串信息
+     *
+     * @param code 传入待转换的对象
+     * @return java.lang.String 返回JSON数据
+     * @author Kevin KDA on 2020/5/16 20:02
+     * @description ErrorMessages / toJsonString
+     * @version 1.0.0
+     * @apiNote
+     * @implSpec
+     * @implNote
+     * @since 1.0.0
+     */
+    public static String toJsonString(Object code) {
+        return JSON.toJSONString(code);
+    }
 
     String backResult(boolean status, Object data);
 

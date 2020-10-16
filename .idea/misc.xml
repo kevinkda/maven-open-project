@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/java-utils/pom.xml" />
         <option value="$PROJECT_DIR$/../../EngineeTest/test/maven-test-01/java-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/java-security-helper/pom.xml" />
       </list>
     </option>
   </component>

@@ -196,16 +196,17 @@ public enum ErrorCode implements ErrorMessages {
      *
      * @since 1.0.0
      */
-    private String msg;
+    private String message;
 
 
     private ErrorCode() {
     }
 
-    private ErrorCode(int code, String msg) {
+    private ErrorCode(int code, String message) {
         this.code = code;
-        this.msg = msg;
+        this.message = message;
     }
+
 
     @Override
     public int getCode() {
@@ -213,8 +214,8 @@ public enum ErrorCode implements ErrorMessages {
     }
 
     @Override
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
 
@@ -222,7 +223,7 @@ public enum ErrorCode implements ErrorMessages {
     public String toString() {
         return "ErrorCode{" +
                 "code=" + code +
-                ", msg='" + msg + '\'' +
+                ", msg='" + message + '\'' +
                 '}';
     }
 

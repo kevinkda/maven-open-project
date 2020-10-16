@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>cn.kevinkda</groupId>
+    <artifactId>java-security-helper</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>java-security-helper</name>
+    <description>Demo project for Spring Boot</description>
+    <url>https://github.com/kevinkda/maven-open-project</url>
+
+
+    <organization>
+        <url>https://github.com/kevinkda</url>
+        <name>Kevin KDA</name>
+    </organization>
+
+    <inceptionYear>2020</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>kevin</id>
+            <name>Kevin Tang</name>
+            <url>https://www.kevinkda.cn</url>
+            <email>kevin_kda@yahoo.com.au</email>
+            <organization>Kevin KDA</organization>
+            <organizationUrl>https://github.com/kevinkda</organizationUrl>
+            <timezone>UTC+08:00</timezone>
+            <roles>
+                <role>developer</role>
+                <role>admin</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:kevinkda/maven-open-project.git</connection>
+        <developerConnection>scm:git:scm:git:git@github.com:kevinkda/maven-open-project.git</developerConnection>
+        <url>https://github.com/kevinkda/maven-open-project</url>
+        <tag>java-utils-0.0.1</tag>
+    </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/kevinkda/maven-open-project/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Travis</system>
+        <url>https://travis-ci.org/dexecutor/dexecutor-core</url>
+    </ciManagement>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-alibaba.version>2.2.2.RELEASE</spring-cloud-alibaba.version>
+        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
+
+
+        <maven.deploy.plugin.version>3.0.0-M1</maven.deploy.plugin.version>
+        <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
+        <maven.javadoc.plugin.version>3.2.0</maven.javadoc.plugin.version>
+        <maven.release.plugin.version>3.0.0-M1</maven.release.plugin.version>
+        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+        <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.scm.provider.gitexe.version>1.11.2</maven.scm.provider.gitexe.version>
+
+        <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
+
+
+        <jwt.org.bouncycastle.bcprov.jdk15on.version>[1.60,)</jwt.org.bouncycastle.bcprov.jdk15on.version>
+        <jwt.io.jsonwebtoken.jjwt.jackson.version>[0.11.1,)</jwt.io.jsonwebtoken.jjwt.jackson.version>
+        <jwt.io.jsonwebtoken.jjwt.impl.version>[0.11.1,)</jwt.io.jsonwebtoken.jjwt.impl.version>
+        <jwt.io.jsonwebtoken.jjwt.api.version>[0.11.1,)</jwt.io.jsonwebtoken.jjwt.api.version>
+
+
+        <alibaba.fastjson.version>[1.2.68,)</alibaba.fastjson.version>
+        <taobao.arthas.version>[3.4.1,)</taobao.arthas.version>
+
+        <cn.kevinkda.java.utils.version>[0.0.1-RELEASE,2.0.0-RELEASE]</cn.kevinkda.java.utils.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${alibaba.fastjson.version}</version>
+            <!--            <scope>compile</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-sentinel-datasource</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!--        JWT-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jwt.io.jsonwebtoken.jjwt.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jwt.io.jsonwebtoken.jjwt.impl.version}</version>
+            <!--            <scope>runtime</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
+            <version>${jwt.io.jsonwebtoken.jjwt.jackson.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--        Uncomment this next dependency if you are using JDK 10 or earlier and you also want to use-->
+        <!--        RSASSA-PSS (PS256, PS384, PS512) algorithms. JDK 11 or later does not require it for those algorithms:-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>${jwt.org.bouncycastle.bcprov.jdk15on.version}</version>
+            <!--            <scope>runtime</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>cn.kevinkda</groupId>
+            <artifactId>java-utils</artifactId>
+            <version>${cn.kevinkda.java.utils.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>Java Security Helper</finalName>
+        <resources>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <includes>
+                    <include>NOTICE*</include>
+                    <include>LICENSE*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>com.kevinkda.core.util.JavaUtilsApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven.deploy.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <!--                <version>2.5.3</version>-->
+                <version>${maven.release.plugin.version}</version>
+                <configuration>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                    <mavenExecutorId>forked-path</mavenExecutorId>
+                    <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${maven.scm.provider.gitexe.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${nexus.staging.maven.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-source-plugin</artifactId>-->
+            <!--                &lt;!&ndash;                <version>[2.10.4,)</version>&ndash;&gt;-->
+            <!--                &lt;!&ndash;                <version>2.1.2</version>&ndash;&gt;-->
+            <!--                <version>${maven.source.plugin.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <attach>true</attach>-->
+            <!--                    &lt;!&ndash;                    <encoding>UTF-8</encoding>&ndash;&gt;-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>attach-javadoc</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>jar</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>attach-sources</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>jar</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
+            <!-- Source -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- force links to Java 8 documentation (should happen automatically
+                        but doesn't) -->
+                    <javaApiLinks>
+                        <property>
+                            <name>api_1.8</name>
+                            <value>https://docs.oracle.com/javase/8/docs/api/</value>
+                        </property>
+                    </javaApiLinks>
+                    <!-- add license notice -->
+                    <bottom>
+                        <![CDATA[This documentation was released into the public domain.]]>
+                    </bottom>
+                    <tags>
+
+                        <tag>
+                            <name>project</name>
+                            <placement>X</placement>
+                            <head>Implementation Note:</head>
+                        </tag>
+                        <tag>
+                            <name>package</name>
+                        </tag>
+                        <tag>
+                            <name>classname</name>
+                        </tag>
+                        <tag>
+                            <name>param</name>
+                        </tag>
+                        <tag>
+                            <name>return</name>
+                        </tag>
+                        <tag>
+                            <name>throws</name>
+                        </tag>
+                        <tag>
+                            <name>since</name>
+                        </tag>
+                        <tag>
+                            <name>version</name>
+                        </tag>
+                        <tag>
+                            <name>serialData</name>
+                        </tag>
+                        <tag>
+                            <name>see</name>
+                        </tag>
+                        <tag>
+                            <name>description</name>
+                        </tag>
+                        <tag>
+                            <name>apiNote</name>
+                            <placement>a</placement>
+                            <head>API Note:</head>
+                        </tag>
+                        <tag>
+                            <name>implSpec</name>
+                            <placement>a</placement>
+                            <head>Implementation Requirements:</head>
+                        </tag>
+                        <tag>
+                            <name>implNote</name>
+                            <placement>a</placement>
+                            <head>Implementation Note:</head>
+                        </tag>
+                        <tag>
+                            <name>interfaces</name>
+                            <placement>a</placement>
+                            <head>Interfaces:</head>
+                        </tag>
+                        <tag>
+                            <name>errorReport</name>
+                            <placement>a</placement>
+                            <head>Error Report:</head>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
+
+    <profiles>
+
+        <!-- GPG Signature on release -->
+        <!--        <profile>-->
+        <!--            <id>release-sign-artifacts</id>-->
+        <!--            <activation>-->
+        <!--                <property>-->
+        <!--                    <name>performRelease</name>-->
+        <!--                    <value>true</value>-->
+        <!--                </property>-->
+        <!--            </activation>-->
+        <!--            <build>-->
+        <!--                <plugins>-->
+        <!--                    <plugin>-->
+        <!--                        <groupId>org.apache.maven.plugins</groupId>-->
+        <!--                        <artifactId>maven-gpg-plugin</artifactId>-->
+        <!--                        <version>${maven.gpg.plugin.version}</version>-->
+        <!--                        <executions>-->
+        <!--                            <execution>-->
+        <!--                                <id>sign-artifacts</id>-->
+        <!--                                <phase>verify</phase>-->
+        <!--                                <goals>-->
+        <!--                                    <goal>sign</goal>-->
+        <!--                                </goals>-->
+        <!--                            </execution>-->
+        <!--                        </executions>-->
+        <!--                    </plugin>-->
+        <!--                </plugins>-->
+        <!--            </build>-->
+        <!--        </profile>-->
+
+        <profile>
+            <!-- 这个id就是打包时的 -P 参数 -->
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- Source插件-->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <!--                        <version>2.2.1</version>-->
+                        <version>${maven.source.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <!--                        <version>2.9.1</version>-->
+                        <version>${maven.javadoc.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <!-- -Xdoclint:none 是为了避免生成apidoc的时候检查过于严格而报错-->
+                                <!--                                <configuration>-->
+                                <!--                                    <additionalparam>-Xdoclint:none</additionalparam>-->
+                                <!--                                </configuration>-->
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- GPG加密插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <!--                        <version>1.6</version>-->
+                        <version>${maven.gpg.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- snapshotRepository与repository的id应与setting.xml中添加的server的id一致 -->
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-qinpiyi</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-qinpiyi</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+
+
+</project>

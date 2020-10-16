@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.kevinkda.core.util.annotation.enumeration.VerifiedType;
 import com.kevinkda.core.util.annotation.func.FuncVerification;
 import com.kevinkda.core.util.exception.web.enumeration.ErrorCode;
+import com.kevinkda.core.util.exception.web.impl.ErrorCodeByJsonImpl;
 import com.kevinkda.core.util.util.json.JsonHelper;
 import org.springframework.stereotype.Service;
 
@@ -99,26 +100,20 @@ public class JsonHelperImpl implements JsonHelper {
     @Override
     @FuncVerification(version = "1.0.0", status = VerifiedType.Pass, date = "2020/5/10 00:35", note = "依赖前端项目测试")
     public Map<String, Object> getCallbacks(Map<String, Object> mapBody) {
-        Map<String, Object> backCode = new HashMap<>(2);
+        com.kevinkda.core.util.exception.web.ErrorCode code = new ErrorCodeByJsonImpl();
 
 //        获得回调函数名，callback
         getCallback(mapBody);
 
 //        进行回调函数名的二次检查，仍然为空，返回错误结果
         if (this.callback == null) {
-//            存入错误代码
-            backCode.put(ErrorCode.E_CODE, ErrorCode.NULL_CALLBACK.getCode());
-//            存入错误信息
-            backCode.put(ErrorCode.E_MSG, ErrorCode.NULL_CALLBACK.getMsg());
-//            存入程序执行数据
-            backCode.put(ErrorCode.DATA, ErrorCode.NO_PRO);
-            return backCode;
+//            存入错误代码、错误信息
+            code.setErrorCode(ErrorCode.NULL_CALLBACK);
+            return code.toMap();
         }
-//        callback值存在，存入错误代码
-        backCode.put(ErrorCode.E_CODE, ErrorCode.SUCCESS.getCode());
-//        存入错误信息
-        backCode.put(ErrorCode.E_MSG, ErrorCode.SUCCESS.getMsg());
-        return backCode;
+//        callback值存在，存入错误代码、错误信息
+        code.setErrorCode(ErrorCode.SUCCESS);
+        return code.toMap();
     }
 
     /**

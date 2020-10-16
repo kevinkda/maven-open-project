@@ -1,7 +1,4 @@
-package com.kevinkda.core.util.exception.web;
-
-import com.kevinkda.core.util.annotation.enumeration.VerifiedType;
-import com.kevinkda.core.util.annotation.func.FuncVerification;
+package com.kevinkda.core.util.exception.web.obsolete;
 
 import java.io.Serializable;
 
@@ -52,31 +49,8 @@ public interface ErrorMessages extends Serializable {
      */
     public static final String JWT = "jwt";
 
-    /**
-     * 获得错误代码
-     *
-     * @return int 返回错误代码
-     * @author Kevin KDA on 2020/10/16 09:33
-     * @description ErrorMessages / getCode
-     * @version 1.0.0
-     * @apiNote
-     * @implSpec
-     * @implNote
-     * @since 1.0.0
-     */
+
     int getCode();
 
-    /**
-     * 获得错误代码对应的错误信息
-     *
-     * @return java.lang.String 返回错误信息
-     * @author Kevin KDA on 2020/10/16 09:34
-     * @description ErrorMessages / getMsg
-     * @version 1.0.0
-     * @apiNote
-     * @implSpec
-     * @implNote
-     * @since 1.0.0
-     */
-    String getMessage();
+    String getMsg();
 }
