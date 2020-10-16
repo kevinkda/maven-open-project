@@ -6,7 +6,7 @@
     <groupId>cn.kevinkda</groupId>
     <artifactId>java-utils</artifactId>
     <!--    <version>0.0.2-SNAPSHOT</version>-->
-    <version>0.0.3-RELEASE</version>
+    <version>0.0.4-RELEASE</version>
 
     <packaging>jar</packaging>
 
@@ -90,11 +90,11 @@
         <google.code.gson.version>[2.8.6,)</google.code.gson.version>
 
         <alibaba.druid.version>[1.1.21,)</alibaba.druid.version>
-        <alibaba.fastjson.version>[1.2.68,)</alibaba.fastjson.version>
-        <taobao.arthas.version>【3.4.1,)</taobao.arthas.version>
+        <alibaba.fastjson.version>[1.2.72,)</alibaba.fastjson.version>
+        <taobao.arthas.version>[3.4.1,)</taobao.arthas.version>
 
 
-<!--        <java-utils.version>[3.1.2-SNAPSHOT,)</java-utils.version>-->
+        <!--        <java-utils.version>[3.1.2-SNAPSHOT,)</java-utils.version>-->
 
         <pagehelper.version>[1.2.5,)</pagehelper.version>
 
@@ -144,11 +144,11 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>${maven.deploy.plugin.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.maven.plugins</groupId>-->
+        <!--            <artifactId>maven-deploy-plugin</artifactId>-->
+        <!--            <version>${maven.deploy.plugin.version}</version>-->
+        <!--        </dependency>-->
 
         <!--        <dependency>-->
         <!--            <groupId>org.mybatis.spring.boot</groupId>-->
@@ -175,7 +175,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${alibaba.fastjson.version}</version>
-            <scope>compile</scope>
+            <!--            <scope>compile</scope>-->
         </dependency>
 
 
@@ -201,35 +201,37 @@
 
 
         <!--        JWT-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-api</artifactId>
-            <version>${jwt.io.jsonwebtoken.jjwt.api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>${jwt.io.jsonwebtoken.jjwt.impl.version}</version>
-            <!--            <scope>runtime</scope>-->
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
-            <version>${jwt.io.jsonwebtoken.jjwt.jackson.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <!--        Uncomment this next dependency if you are using JDK 10 or earlier and you also want to use-->
-        <!--        RSASSA-PSS (PS256, PS384, PS512) algorithms. JDK 11 or later does not require it for those algorithms:-->
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version>${jwt.org.bouncycastle.bcprov.jdk15on.version}</version>
-            <!--            <scope>runtime</scope>-->
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-api</artifactId>-->
+<!--            <version>${jwt.io.jsonwebtoken.jjwt.api.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-impl</artifactId>-->
+<!--            <version>${jwt.io.jsonwebtoken.jjwt.impl.version}</version>-->
+<!--            &lt;!&ndash;            <scope>runtime</scope>&ndash;&gt;-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt-jackson</artifactId> &lt;!&ndash; or jjwt-gson if Gson is preferred &ndash;&gt;-->
+<!--            <version>${jwt.io.jsonwebtoken.jjwt.jackson.version}</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash;        Uncomment this next dependency if you are using JDK 10 or earlier and you also want to use&ndash;&gt;-->
+<!--        &lt;!&ndash;        RSASSA-PSS (PS256, PS384, PS512) algorithms. JDK 11 or later does not require it for those algorithms:&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.bouncycastle</groupId>-->
+<!--            <artifactId>bcprov-jdk15on</artifactId>-->
+<!--            <version>${jwt.org.bouncycastle.bcprov.jdk15on.version}</version>-->
+<!--            &lt;!&ndash;            <scope>runtime</scope>&ndash;&gt;-->
+<!--        </dependency>-->
+
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13</version>
+            <!--            <version>4.13</version>-->
             <scope>test</scope>
         </dependency>
 
